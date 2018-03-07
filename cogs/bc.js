@@ -25,14 +25,14 @@ var per = "You Don\'t Have Permission ";
                                         .addField('Sender', message.author.username)
                                         .addField('Message', args)
                                         .setThumbnail(message.author.avatarURL)
-                                        .setFooter(copy, client.user.avatarURL);
+                                        .setFooter(copy, bot.user.avatarURL);
                                     m.send({ embed: bc })
                                 });
                             });
                     });
                 
-                
-});
+}                
+
 
 module.exports.config = {
   command: "bc"
