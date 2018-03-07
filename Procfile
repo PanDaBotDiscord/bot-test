@@ -1,1 +1,1 @@
-worker: npm i pretty-ms
+worker: npm i embed
