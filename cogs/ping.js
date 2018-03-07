@@ -4,5 +4,5 @@ module.exports.run = async (bot, message, args) => {
     }
 
 module.exports.config = {
-  name: "ping"
+  command: "ping"
 }
