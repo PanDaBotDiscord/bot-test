@@ -1,1 +1,1 @@
-worker: npm i canvas
+worker: npm i jimp
