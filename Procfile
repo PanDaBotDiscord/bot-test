@@ -1,1 +1,1 @@
-worker: npm i colors
+worker: npm i moment
