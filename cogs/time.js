@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
-  client.on('message', message => {
          if (!message.channel.guild) return message.reply('** This command only for servers **');
          var currentTime = new Date(),
             hours = currentTime.getHours() + 4 ,
@@ -57,7 +56,8 @@ module.exports.run = async (bot, message, args) => {
                 .addField('__**Date:earth_africa: **__',
                 "『"+ Day + "-" + Month + "-" + Year +  "』")
                message.channel.sendEmbed(Date15);
-    });
+ 
+}
 module.exports.config = {
   command: "time"
 }
