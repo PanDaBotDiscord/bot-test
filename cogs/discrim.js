@@ -1,7 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-    var args = message.content.split(" ").slice(1);
-      if (message.author.bot) return;
-      if (!message.content.startsWith(prefix)) return;
+  if(msg === prefix + 'DISCRIM'){
       var discri = args[0]
       let discrim
       if(discri){
@@ -25,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
               ${users.join('\n')}
           `);
   }
-
+}
 module.exports.config = {
     command: "discrim"
 }
