@@ -1,118 +1,49 @@
-//-------------start require ---------//
 const Discord = require("discord.js");
-const bot = new Discord.Client();
-const fs = require("fs");
-//------------end require ----------//
 
-//-----------strat var global -------------//
-var Commandslist = fs.readFileSync('Data/Commands.txt', 'utf8');    
+const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
+const fs = require("fs");
+fs.readdir("./cogs/", (err, files) => {
 
-//comand handler
+  if(err) console.log(err);
 
-function loadCmds() {
-fs.readdir('./cogs/', (err, files) => {
-  if(err) console.error(err); 
+  let jsfile = files.filter(f => f.split(".").pop() === "js")
+  if(jsfile.length <= 0){
+    console.log("Couldn't find commands.");
+    return;
+  }
 
-    var jsfiles = files.filter(f => f.split('.').pop() === 'js');
-    if (jsfiles.length <= 0) { return console.log('No Cogs fuond....')}
-    else { console.log(jsfiles.length + 'cogs found.') }
-    
-    jsfiles.forEach((f, i) => {
-        delete require.cache[require.resolve(`./cogs/${f}`)];
-        var cmds = require(`./cogs/${f}`);
-        console.log(`cogs ${f} loading.....`);
-        bot.commands.set(cmds.config.command, cmds);
-    })
+  jsfile.forEach((f, i) =>{
+    let props = require(`./cogs/${f}`);
+    console.log(`${f} loaded!`);
+    bot.commands.set(props.help.name, props);
+  });
 
-})
-    
-}
-//comand handler
-
-//-----------end var-----------------//
-
-
-bot.on('ready', () => {
-  console.log(`Logged in as ${bot.user.tag}!`);
 });
 
-//---------------------------------------//
 
-//function
-function userInfo(user, guild){
-    var finalString = '';
-    
-    //Name
-    
-    finalString += '**' + user.username + '**, with the **ID** of **' + user.id + '**';
-    
-    var usercearte = user.createdAt.toString().split(' ');
-    
-    finalString += 'was ** created on' + usercearte[1] + ',' + usercearte[2] + ',' + usercearte[3] + '**'
-    
-   
-    
-    return finalString;
-}
-loadCmds();
-//listener
-bot.on('message', message => {
-    //var
-    var sender = message.author;
-    var msg = message.content.toUpperCase();
-    var prefix= '&';
-    var cont = message.content.slice(prefix.length).split(" ");
-    var args = cont.slice(1);
-    //end var
-    if (!message.content.startsWith(prefix)) return;
-    
-    var cmd = bot.commands.get(cont[0])
-    if (cmd) cmd.run(bot, message, args);
-    
-    //reload load unload
-        
-    if (msg === prefix + 'RESTART') {
-        message.channel.send({embed:{description: "All cogs restarted"}})
-        message.channel.send('All cogs redtarted')
-        loadCmds()
-    }
-    
-    //end reload load unload
-        //profanities
-    
-    //if conditnon
-    if (sender.id === '419188357181079553') {
-        return;
-    }
-    
-    //Commands
-    
-    if (msg === prefix + 'HELPER') {
-        message.channel.send(Commandslist)
-    }
-    
-    //end Commands
-    
-   /** if (msg === prefix + 'PING') {
-        message.channel.send('Pong!')
-    }
-    **/
-    //user info 
-    if (msg.startsWith(prefix + 'USERINFO')) {
-        if (msg === prefix + 'USERINFO') {
-            message.channel.send(userInfo(sender, message.guild));
-        }
-    }
-   
-  
-    // Score/Stats System
-    //if conditnon
+bot.on("ready", async () => {
+  console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
+
+  bot.user.setActivity("tutorials on TSC", {type: "WATCHING"});
+
+  //bot.user.setGame("on SourceCade!");
 });
 
-//consol log started bot
-bot.on('ready', () => {
-    console.log('bot launched....')
+bot.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let prefix = "&";
+  let messageArray = message.content.split(" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+  let commandfile = bot.commands.get(cmd.slice(prefix.length));
+  if(commandfile) commandfile.run(bot,message,args);
+
+
+
 });
 
 // THIS  MUST  BE  THIS  WAY
