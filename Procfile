@@ -1,1 +1,1 @@
-worker: npm i jimp
+worker: npm i nodemon
