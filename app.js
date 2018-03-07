@@ -34,13 +34,13 @@ fs.readdir('./cogs/', (err, files) => {
 
 
 bot.on('ready', () => {
-  console.log(`||======================================||`.red);
-  console.log(`Logged in as ${bot.user.tag}!`.green);
-  console.log(`||======================================||`.red);
-  console.log(`ON ${bot.guilds.size} Servers `.green);
-  console.log(`||======================================||`.red);
-  console.log(`Logged in as ${bot.user.tag}!`.green);
-  console.log(`||======================================||`.red);
+  console.log(`||======================================||`);
+  console.log(`Logged in as ${bot.user.tag}!`;
+  console.log(`||======================================||`);
+  console.log(`ON ${bot.guilds.size} Servers `);
+  console.log(`||======================================||`);
+  console.log(`Logged in as ${bot.user.tag}!`);
+  console.log(`||======================================||`);
 });
 
 //---------------------------------------//
