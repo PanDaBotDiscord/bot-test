@@ -1,9 +1,7 @@
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
     if (message.author.bot) return;
-    if (!message.content.startsWith(prefix)) return;
-
-
+    
     var discri = args[0]
     let discrim
     if(discri){
