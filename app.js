@@ -40,7 +40,21 @@ bot.on('ready', () => {
 //---------------------------------------//
 
 //function
-
+function userInfo(user, guild){
+    var finalString = '';
+    
+    //Name
+    
+    finalString += '**' + user.username + '**, with the **ID** of **' + user.id + '**';
+    
+    var usercearte = user.createdAt.toString().split(' ');
+    
+    finalString += 'was ** created on' + usercearte[1] + ',' + usercearte[2] + ',' + usercearte[3] + '**'
+    
+   
+    
+    return finalString;
+}
 loadCmds();
 //listener
 bot.on('message', message => {
@@ -51,8 +65,6 @@ bot.on('message', message => {
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
     //end var
-    
-    
     if (!message.content.startsWith(prefix)) return;
     
     var cmd = bot.commands.get(cont[0])
@@ -68,7 +80,7 @@ bot.on('message', message => {
     
     //end reload load unload
         //profanities
-   
+    
     //if conditnon
     if (sender.id === '419188357181079553') {
         return;
@@ -87,9 +99,13 @@ bot.on('message', message => {
     }
     **/
     //user info 
-
-    // Score/Stats System
+    if (msg.startsWith(prefix + 'USERINFO')) {
+        if (msg === prefix + 'USERINFO') {
+            message.channel.send(userInfo(sender, message.guild));
+        }
+    }
    
+  
     // Score/Stats System
     //if conditnon
 });
@@ -98,5 +114,6 @@ bot.on('message', message => {
 bot.on('ready', () => {
     console.log('bot launched....')
 });
+
 // THIS  MUST  BE  THIS  WAY
 bot.login(process.env.BOT_TOKEN);
