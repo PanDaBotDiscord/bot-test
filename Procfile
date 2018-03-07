@@ -1,1 +1,1 @@
-worker: npm i embed
+worker: npm i colors
