@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-     if (msg === prefix + 'PING') {
+     if (message === prefix + 'PING') {
         message.channel.send('Pong!')
     }
     
