@@ -3,6 +3,6 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send('Pong!')
     }
 
-module.exports.help = {
+module.exports.config = {
   name: "ping"
 }
