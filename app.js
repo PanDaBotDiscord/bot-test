@@ -1,15 +1,6 @@
 //-------------start require ---------//
 const Discord = require("discord.js");
 const bot = new Discord.Client();
-const colors = require("colors")
-//const ms = require('ms');
-//const dateFormat = require('dateformat');
-//const moment = require('moment');
-//moment().format();
-//const embed = require('embed');
-//const pretty = require("pretty-ms");
-//const rn = require("random-number");
-//const done = {};
 const fs = require("fs");
 //------------end require ----------//
 
