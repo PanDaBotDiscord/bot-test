@@ -1,1 +1,1 @@
-worker: npm i moment
+worker: npm i dateformat
