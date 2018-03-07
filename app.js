@@ -1,6 +1,15 @@
 //-------------start require ---------//
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const colors = require("colors")
+const ms = require('ms');
+const dateFormat = require('dateformat');
+const moment = require('moment');
+moment().format();
+const embed = require('embed');
+const pretty = require("pretty-ms");
+const rn = require("random-number");
+const done = {};
 const fs = require("fs");
 //------------end require ----------//
 
@@ -34,7 +43,13 @@ fs.readdir('./cogs/', (err, files) => {
 
 
 bot.on('ready', () => {
-  console.log(`Logged in as ${bot.user.tag}!`);
+  console.log(`||======================================||`.red);
+  console.log(`Logged in as ${client.user.tag}!`.green);
+  console.log(`||======================================||`.red);
+  console.log(`ON ${client.guilds.size} Servers `.green);
+  console.log(`||======================================||`.red);
+  console.log(`Logged in as ${client.user.tag}!`.green);
+  console.log(`||======================================||`.red);
 });
 
 //---------------------------------------//
