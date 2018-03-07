@@ -7,7 +7,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
           if(!message.channel.guild) return message.reply('**انتا تبغا توقف البوت ولا تستهبل رح السيرفر تشتغل قفطتك هاه يا ذكي**');
          var embed  = new Discord.RichEmbed()
-         .addField("``علامة البوت :``",`${prefix}`)
+         .addField("``علامة البوت :``",`&`)
          .addField("``مجموع سيرفرات البوت :``", bot.guilds.size,true)
          .addField("``مجموع القنوات :``", bot.channels.size,true)
          .addField("`` الرام المستخدم للجافا : ``",`${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`,true)
