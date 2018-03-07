@@ -1,1 +1,1 @@
-worker: npm i ms
+worker: npm i canvas
