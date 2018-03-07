@@ -35,7 +35,7 @@ fs.readdir('./cogs/', (err, files) => {
 
 bot.on('ready', () => {
   console.log(`||======================================||`);
-  console.log(`Logged in as ${bot.user.tag}!`;
+  console.log(`Logged in as ${bot.user.tag}!`);
   console.log(`||======================================||`);
   console.log(`ON ${bot.guilds.size} Servers `);
   console.log(`||======================================||`);
