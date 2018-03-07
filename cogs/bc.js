@@ -5,7 +5,7 @@ if (message.author.bot) return;
 if (!message.channel.type == `text`) return message.channel.send('هذا الأمر فقط للسيرفرات')
 var per = "You Don\'t Have Permission ";
         var request = `Requested By ${message.author.username}`;
-                    var args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+                   
                     if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply(per + "Administrator");
                     if (!args) return message.reply('You Must Place An Argument To Do This Command');
                     message.reply(`هل انت متاكد انك تريد ارسال هاذهه الرسالة ? [Y]/[yes]`).then(() => {
