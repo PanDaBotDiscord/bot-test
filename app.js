@@ -43,7 +43,25 @@ bot.on('ready', () => {
   console.log(`||======================================||`);
 });
 
+
+
+//---------------------------------------//
+
+//function
+loadCmds();
+//listener
 bot.on('message', message => {
+    //var
+    var sender = message.author;
+    var msg = message.content.toUpperCase();
+    var prefix= '&';
+    var cont = message.content.slice(prefix.length).split(" ");
+    var args = cont.slice(1);
+    //end var
+    
+    bot.on('message', message => {
+      if (!message.content.startsWith(prefix)) return;
+
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
   if (message.author.id == 333239187509870595) return;
@@ -68,22 +86,6 @@ if (message.content.startsWith(prefix + 'الصورة')) {
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
 }
 });
-
-//---------------------------------------//
-
-//function
-loadCmds();
-//listener
-bot.on('message', message => {
-    //var
-    var sender = message.author;
-    var msg = message.content.toUpperCase();
-    var prefix= '&';
-    var cont = message.content.slice(prefix.length).split(" ");
-    var args = cont.slice(1);
-    //end var
-    
-    
     
     if (!message.content.startsWith(prefix)) return;
     
