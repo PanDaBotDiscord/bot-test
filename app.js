@@ -58,22 +58,22 @@ loadCmds();
   var argresult = args.join(' ');
   if (message.author.id == 333239187509870595) return;
 
-if (message.content.startsWith(prefix + 'بلاينج')) {
+if (message.content.startsWith(prefix + 'setply')) {
   bot.user.setGame(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
 } else
 
-if (message.content.startsWith(prefix + 'ستريم')) {
+if (message.content.startsWith(prefix + 'stream')) {
   bot.user.setGame(argresult, "https://www.twitch.tv/Mishary00_");
     message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
 } else
 
-if (message.content.startsWith(prefix + 'الأسم')) {
+if (message.content.startsWith(prefix + 'name')) {
   bot.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
   return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
-if (message.content.startsWith(prefix + 'الصورة')) {
+if (message.content.startsWith(prefix + 'pic')) {
   bot.user.setAvatar(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
 }
