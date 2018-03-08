@@ -3,7 +3,7 @@ const Discord = require("discord.js");
   var link = "https://discord.gg/tjnFVzy";
   var img = "http://codeup.tk/s/do.php?img=26";
   var idc = "419258975650054145";
-  var vr = 'Version  : 1.0.0';
+  var vr = 'Version  : 1.2.0';
 module.exports.run = async (bot, message, args) => {
           if(!message.channel.guild) return message.reply('**انتا تبغا توقف البوت ولا تستهبل رح السيرفر تشتغل قفطتك هاه يا ذكي**');
          var embed  = new Discord.RichEmbed()
