@@ -1,7 +1,10 @@
 //-------------start require ---------//
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const ms = require('ms');
+const dateFormat = require('dateformat');
 const moment = require('moment');
+moment().format();
 const fs = require("fs");
 const prefix= '&';
 //------------end require ----------//
