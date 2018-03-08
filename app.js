@@ -56,7 +56,7 @@ loadCmds();
 
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id == 333239187509870595) return;
+  if (message.author.id == 341511920953720832) return;
 
 if (message.content.startsWith(prefix + 'setply')) {
   bot.user.setGame(argresult);
