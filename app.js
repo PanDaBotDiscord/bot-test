@@ -43,6 +43,33 @@ bot.on('ready', () => {
   console.log(`||======================================||`);
 });
 
+bot.on('message', message => {
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+  if (message.author.id == 333239187509870595) return;
+
+if (message.content.startsWith(prefix + 'بلاينج')) {
+  bot.user.setGame(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
+} else
+
+if (message.content.startsWith(prefix + 'ستريم')) {
+  bot.user.setGame(argresult, "https://www.twitch.tv/Mishary00_");
+    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
+} else
+
+if (message.content.startsWith(prefix + 'الأسم')) {
+  bot.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
+  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
+} else
+if (message.content.startsWith(prefix + 'الصورة')) {
+  bot.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+}
+});
+
 //---------------------------------------//
 
 //function
