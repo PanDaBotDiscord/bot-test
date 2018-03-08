@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+var prefix = '&';
 module.exports.run = async (bot, message,) => {
 var copy = "All CopyRights Reseaved For Luxury bot team";
          var args = message.content.split(" ").join(" ").slice(2 + prefix.length);
