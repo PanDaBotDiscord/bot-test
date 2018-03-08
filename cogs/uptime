@@ -2,6 +2,14 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
  
+if(!message.channel.guild) return;
+const embed = new Discord.RichEmbed()
+ .setTitle("Security Bot Uptime:")
+ .setDescription(`${secondsToString(process.uptime())}`)
+ .setColor("#08088A")
+.setFooter(bot.user.tag, bot.user.displayAvatarURL);       
+message.channel.send(embed)
+
 function convertMS(ms) {
     var d, h, m, s;
     s = Math.floor(ms / 1000);
@@ -28,13 +36,6 @@ function secondsToString(seconds) {
 	return `${numdays} days ${numhours} hours ${numminutes} minutes ${numseconds} seconds`
 }
 
-if(!message.channel.guild) return;
-const embed = new Discord.RichEmbed()
- .setTitle("Security Bot Uptime:")
- .setDescription(`${secondsToString(process.uptime())}`)
- .setColor("#08088A")
-.setFooter(bot.user.tag, bot.user.displayAvatarURL);       
-message.channel.send(embed)
     
 }
 
