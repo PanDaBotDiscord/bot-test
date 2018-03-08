@@ -44,7 +44,6 @@ bot.on('ready', () => {
 });
 
 bot.on('message', message => {
-  if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
   if (message.author.id == 333239187509870595) return;
