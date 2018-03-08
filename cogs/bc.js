@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, message,) => {
 var copy = "All CopyRights Reseaved For Luxury bot team";
-         var argm = message.content.split(' ').slice(1);
+         var args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 if (message.author.bot) return;
 if (!message.channel.type == `text`) return message.channel.send('هذا الأمر فقط للسيرفرات')
 var per = "You Don\'t Have Permission ";
         var request = `Requested By ${message.author.username}`;
                    
                     if (!message.member.hasPermission('ADMINISTRATOR')) return message.reply(per + "Administrator");
-                    if (!argm) return message.reply('You Must Place An Argument To Do This Command');
+                    if (!args) return message.reply('You Must Place An Argument To Do This Command');
                     message.reply(`هل انت متاكد انك تريد ارسال هاذهه الرسالة ? [Y]/[yes]`).then(() => {
                         message.channel.awaitMessages(msg => msg.content == 'y' || msg.content == 'نعم' || msg.contnet == "ن", {
                             max: 1,
@@ -24,7 +24,7 @@ var per = "You Don\'t Have Permission ";
                                         .setTitle('Broadcast')
                                         .addField('Server', message.guild.name)
                                         .addField('Sender', message.author.username)
-                                        .addField('Message', argm)
+                                        .addField('Message', args)
                                         .setThumbnail(message.author.avatarURL)
                                         .setFooter(copy, bot.user.avatarURL);
                                     m.send({ embed: bc })
