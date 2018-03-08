@@ -2,6 +2,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require("fs");
+const prefix= '&';
 //------------end require ----------//
 
 //-----------strat var global -------------//
@@ -54,39 +55,11 @@ bot.on('message', message => {
     //var
     var sender = message.author;
     var msg = message.content.toUpperCase();
-    var prefix= '&';
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
     //end var
     
-    bot.on('message', message => {
-      if (!message.content.startsWith(prefix)) return;
-
-  var args = message.content.split(' ').slice(1);
-  var argresult = args.join(' ');
-  if (message.author.id == 333239187509870595) return;
-
-if (message.content.startsWith(prefix + 'بلاينج')) {
-  bot.user.setGame(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
-} else
-
-if (message.content.startsWith(prefix + 'ستريم')) {
-  bot.user.setGame(argresult, "https://www.twitch.tv/Mishary00_");
-    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
-} else
-
-if (message.content.startsWith(prefix + 'الأسم')) {
-  bot.user.setUsername(argresult).then
-      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
-  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
-} else
-if (message.content.startsWith(prefix + 'الصورة')) {
-  bot.user.setAvatar(argresult);
-    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
-}
-});
-    
+   
     if (!message.content.startsWith(prefix)) return;
     
     var cmd = bot.commands.get(cont[0])
@@ -127,7 +100,34 @@ if (message.content.startsWith(prefix + 'الصورة')) {
     // Score/Stats System
     //if conditnon
 });
+ bot.on('message', message => {
+      if (!message.content.startsWith(prefix)) return;
 
+  var args = message.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+  if (message.author.id == 333239187509870595) return;
+
+if (message.content.startsWith(prefix + 'بلاينج')) {
+  bot.user.setGame(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
+} else
+
+if (message.content.startsWith(prefix + 'ستريم')) {
+  bot.user.setGame(argresult, "https://www.twitch.tv/Mishary00_");
+    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
+} else
+
+if (message.content.startsWith(prefix + 'الأسم')) {
+  bot.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
+  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
+} else
+if (message.content.startsWith(prefix + 'الصورة')) {
+  bot.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+}
+});
+    
 //consol log started bot
 bot.on('ready', () => {
     console.log('bot launched....')
