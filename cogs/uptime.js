@@ -1,4 +1,7 @@
 const Discord = require("discord.js");
+
+module.exports.run = async (bot, message, args) => {
+ 
 function convertMS(ms) {
     var d, h, m, s;
     s = Math.floor(ms / 1000);
@@ -24,8 +27,6 @@ function secondsToString(seconds) {
 	let numseconds = (((seconds % 31536000) % 86400) % 3600) % 60
 	return `${numdays} days ${numhours} hours ${numminutes} minutes ${numseconds} seconds`
 }
-module.exports.run = async (bot, message, args) => {
- 
 
 if(!message.channel.guild) return;
 const embed = new Discord.RichEmbed()
