@@ -4,8 +4,7 @@ module.exports.run = async (bot, message, args) => {
    if(!message.author.id === '333239187509870595') return;
   message.channel.sendMessage('تم , جار أرسال الرسالة')
   bot.users.forEach(m =>{
-  var bc = new
-                                          Discord.RichEmbed()
+  var bc = new Discord.RichEmbed()
                                           .setColor('RANDOM')
                                           .setTitle('Broadcast')
                                           .addField('Server', message.guild.name)
