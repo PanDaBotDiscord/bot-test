@@ -6,9 +6,8 @@ const dateFormat = require('dateformat');
   var idc = "419258975650054145";
   var vr = 'Version  : 1.0.0'
   let prefix = "&";
- const msg = parseInt();
-module.exports.run = async (bot, message, args) => {
- if(!message.channel.guild) return message.reply('**انتا تبغا توقف البوت ولا تستهبل رح السيرفر تشتغل قفطتك هاه يا ذكي**');
+module.exports.run = async (bot, message,) => {
+                            	 if(!message.channel.guild) return message.reply('**انتا تبغا توقف البوت ولا تستهبل رح السيرفر تشتغل قفطتك هاه يا ذكي**');
     const millisCreated = new Date().getTime() - message.author.createdAt.getTime();
     const daysCreated = millisCreated / 1000 / 60 / 60 / 24;
          var embed  = new Discord.RichEmbed()
@@ -19,8 +18,7 @@ module.exports.run = async (bot, message, args) => {
          .setColor('RANDOM')
          .setFooter(copy,img)
          message.channel.sendEmbed(embed)
-
- }
+}
 module.exports.config = {
-  command: "id"
+  command: "myinfo"
 }
