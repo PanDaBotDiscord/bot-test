@@ -45,13 +45,13 @@ fs.readdir('./cogs/', (err, files) => {
 
 
 bot.on('ready', () => {
-  console.log(`||======================================||`.red);
-  console.log(`Logged in as ${client.user.tag}!`.green);
-  console.log(`||======================================||`.red);
-  console.log(`ON ${client.guilds.size} Servers `.green);
-  console.log(`||======================================||`.red);
-  console.log(`Logged in as ${client.user.tag}!`.green);
-  console.log(`||======================================||`.red);
+  console.log(`||======================================||`);
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`||======================================||`);
+  console.log(`ON ${client.guilds.size} Servers `);
+  console.log(`||======================================||`);
+  console.log(`Logged in as ${client.user.tag}!`);
+  console.log(`||======================================||`);
 });
 
 
