@@ -11,7 +11,6 @@ const fs = require('fs');
   var vr = 'Version  : 1.0.0'
   let prefix = "&";
 module.exports.run = async (bot, message,) => {
-                           if(message.content.startsWith(prefix + 'pid')) {
 if(!message.channel.guild) return;
       var args = message.content.split(" ").slice(1);
       let user = message.mentions.users.first();
@@ -134,7 +133,6 @@ var moment = require("moment");
      message.channel.sendFile(canvas.toBuffer())
 })
    })
-  }
 
 }
 module.exports.config = {
