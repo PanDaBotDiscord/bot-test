@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
 .setColor('RANDOM')
       message.author.send({embed})
       message.reply("الرجاء التأكد من الخاص :mailbox_with_mail: ");
-      message.react(':purple_heart:')
+      message.react('💜')
   }
 module.exports.config = {
   command: "help"
