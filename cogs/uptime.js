@@ -39,8 +39,8 @@ ${uptime}
           .addField(':book: Discord.js ',`\`\`\`autohotkey
 v ${version}
 \`\`\``,true)     
-          .addField(':love_letter: invite',`https://goo.gl/7sqhKL`,true)     
-          .addField(':sos: Support Server',`https://discord.gg/bGBwGrZ`,true)    
+          .addField(':love_letter: invite',`https://goo.gl/vqkYFf`,true)     
+          .addField(':sos: Support Server',`https://goo.gl/bP9LHG`,true)    
           .setFooter(`BOT ID (${bot.user.id})`);      
   message.channel.sendEmbed(embed);
 
