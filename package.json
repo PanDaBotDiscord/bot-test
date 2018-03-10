@@ -1,13 +1,18 @@
 {
-  "name": "Test",
-  "description": "Test",
+  "name": "luxurybot",
+  "description": "A discord bot for didney worl who has an appetite for non-nutritive substances",
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
+     "discord.js": "^11.3.0",
+    "dotenv": "^4.0.0",
+    "googleapis": "^20.2.0",
+    "node-opus": "^0.2.7",
+    "ytdl-core": "^0.20.1"
   }
 }
+
+ 
