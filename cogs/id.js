@@ -28,9 +28,6 @@ if(!message.channel.guild) return;
          } else {
              h = message.member
          }
-var Canvas = require('canvas')
-var jimp = require('jimp')
-var moment = require("moment");
   moment.locale('ar');
     const w = ['./id1.png','./id2.png','./id3.png','./id4.png','./id5.png']
         let Image = Canvas.Image,
