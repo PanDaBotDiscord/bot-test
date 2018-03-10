@@ -6,7 +6,6 @@ const dateFormat = require('dateformat');
 const moment = require('moment');
 moment().format();
 const colors = require("colors");
-const googl = require('goo.gl');
 const embed = require('embed');
 const fs = require('fs');
 const pretty = require("pretty-ms");
