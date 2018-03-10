@@ -20,7 +20,7 @@
     "pretty-ms": "^3.1.0",
     "random-number": "^0.0.9",
     "goo.gl": "^0.1.4",
-    "canvas": "^2.0.0-alpha.11",
+    "canvas": "^1.5.0",
     "jimp": "^0.2.28"
   }
 }
