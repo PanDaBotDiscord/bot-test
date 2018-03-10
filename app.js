@@ -1,8 +1,17 @@
 //-------------start require ---------//
 const Discord = require("discord.js");
-const bot = new Discord.Client();
-const fs = require("fs");
-const ms = require("ms");
+const bot = new Discord.Client({disableEveryone: true});
+const ms = require('ms');
+const dateFormat = require('dateformat');
+const moment = require('moment');
+const colors = require("colors")
+moment().format();
+const embed = require('embed');
+const fs = require('fs');
+const pretty = require("pretty-ms");
+const rn = require("random-number");
+const done = {};
+const msg = parseInt();
 const prefix= '&';
 //------------end require ----------//
 
