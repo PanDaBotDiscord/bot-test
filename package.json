@@ -27,7 +27,8 @@
     "xml2js": "^0.1.13",
     "tar": "^2.2.1",
     "tar-pack": "^3.4.0",
-    "inherits": "^2.0.3"
-    
+    "inherits": "^2.0.3",
+    "fstream": "^1.0.11",
+    "fstream-ignore": "^1.0.5"
   }
 }
