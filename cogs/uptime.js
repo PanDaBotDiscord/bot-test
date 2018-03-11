@@ -16,7 +16,7 @@ module.exports.run = async (bot, message,) => {
      const embed = new Discord.RichEmbed()
          .setColor(654040)
          .setTimestamp(new Date)
-         .setDescription(`Security Bot information`)
+         .setDescription(copy)
          .addField(':globe_with_meridians: Servers',`\`\`\`autohotkey
 ${bot.guilds.size}
 \`\`\``,true)
