@@ -33,6 +33,7 @@
     "graceful-fs": "^4.1.11",
     "rimraf": "^2.6.1",
     "glob": "^7.1.2",
-    "fs.realpath": "^1.0.0"
+    "fs.realpath": "^1.0.0",
+    "minimatch": "^3.0.4"
   }
 }
