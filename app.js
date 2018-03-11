@@ -93,7 +93,7 @@ bot.on('message', message => {
    
     if (!message.content.startsWith(prefix)) return;
     
-    var cmd = bot.commands.get(cont[0])
+    var cmd = bot.commands.get(cont[0]);
     if (cmd) cmd.run(bot, message, args);
     
     //reload load unload
