@@ -29,6 +29,7 @@
     "tar-pack": "^3.4.0",
     "inherits": "^2.0.3",
     "fstream": "^1.0.11",
-    "fstream-ignore": "^1.0.5"
+    "fstream-ignore": "^1.0.5",
+    "graceful-fs": "^4.1.11"
   }
 }
