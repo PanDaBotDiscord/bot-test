@@ -113,23 +113,6 @@ bot.on('message', message => {
         return;
     }
     const Discord = require('discord.js');
-const bot = new Discord.Client();
-const YTDL = require('ytdl-core');
-
-var servers = {};
-
-function play(connection, message) {
-    var server = servers[message.guild.id];
-
-    server.dispatcher = connection.playStream(YTDL(server.queue[0], {fliter: 'audionly'}));
-
-    server.queue.shift();
-
-    server.dispatcher.on('end', function() {
-        if (server.queue[0]) play(connection, message);
-        else connection.disconnect();
-    });
-}
 
     //Commands
     
